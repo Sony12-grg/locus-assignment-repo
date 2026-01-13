@@ -9,7 +9,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve frontend
-app.use(express.static(path.join(__dirname, "../Frontend"))); // <-- frontend folder
+app.use(express.static(path.join(__dirname, "..")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "index.html"));
+});
+
 
 // Database
 const db = new Database("users.db");
