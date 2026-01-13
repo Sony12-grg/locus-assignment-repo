@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e9e7e7;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        .container{
+            height: 550px;
+            width: 350px;
+            border: 4px solid rgb(77, 76, 76);
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 20px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            /* gap: 10px; */
+        }
+        form input{
+            height: 35px;
+            width: 300px;
+            margin-bottom: 15px;
+            margin-left: 15px;
+            border: 1px solid rgb(207, 206, 206);
+            border-radius: 5px;
+        }
+        form label{
+            margin-left: 15px;
+            font-size: 18px;
+        }
+        .content{
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        button{
+            border: none;
+            color: rgb(31, 31, 31);
+            font-size: 16px;
+            height: 35px;
+            width: 100px;
+            margin-left: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #bt1{
+            background-color: rgb(32, 222, 156);
+        }
+        #bt2{
+            margin-top: 10px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div class="container">
+        <form action="" id="regForm">
+            <div class="content">
+             <label for="fullname">Full Name:</label>
+             <input type="text" id="fullname" name="fullname">
+             <label for="email">Email:</label>
+             <input type="email" id="email" name="email">
+             <label for="password">Password:</label>
+             <input type="password" id="password" name="password">
+            </div>
+              <button type="submit" class="btn" id="bt1">Submit</button>
+             <button type="reset" class="btn" id="bt2">Reset</button>
+        </form>
+   
+       <div id="information" style="margin-top: 30px; margin-left: 15px;">
+         <p>Display</p>
+       </div>
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>
