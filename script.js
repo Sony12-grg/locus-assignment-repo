@@ -3,7 +3,7 @@ const information = document.getElementById("information");
 
 // Load users from database
 async function loadUsers() {
-  const res = await fetch("http://localhost:3000/users");
+  const res = await fetch("https://your-backend-url.onrender.com/users");
   const users = await res.json();
   information.innerHTML = "";
 if (users.length === 0) {
@@ -29,7 +29,7 @@ form.addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  await fetch("http://localhost:3000/submit", {
+  await fetch("https://your-backend-url.onrender.com/submit", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ fullname, email, password }),
@@ -40,7 +40,7 @@ form.addEventListener("submit", async (e) => {
 
 // RESET DATA
 form.addEventListener("reset", async () => {
-  await fetch("http://localhost:3000/reset", { method: "POST" });
+  await fetch("https://your-backend-url.onrender.com/reset", { method: "POST" });
   information.innerHTML = "<p>No data available</p>";
 });
 
